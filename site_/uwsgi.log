@@ -1,0 +1,63 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Thu Jan  4 19:01:28 2018] ***
+compiled with version: 4.8.4 on 04 December 2017 16:49:55
+os: Linux-4.4.0-93-generic #116~14.04.1-Ubuntu SMP Mon Aug 14 16:07:05 UTC 2017
+nodename: Greywall
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/site_
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/site_
+your processes number limit is 3869
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 172.17.86.109:9090 fd 3
+Python version: 3.4.3 (default, Nov 17 2016, 01:12:14)  [GCC 4.8.4]
+Python main interpreter initialized at 0x1802380
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 617802 bytes (603 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1802380 pid: 2730 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2730)
+spawned uWSGI worker 1 (pid: 2732, cores: 2)
+spawned uWSGI worker 2 (pid: 2733, cores: 2)
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:53: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.Site doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class Site(models.Model):
+
+/usr/local/lib/python3.4/dist-packages/django/utils/six.py:808: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.Page doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  return meta(name, bases, d)
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:1412: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.PageRevision doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class PageRevision(models.Model):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:1565: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.GroupPagePermission doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class GroupPagePermission(models.Model):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:1914: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.PageViewRestriction doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class PageViewRestriction(BaseViewRestriction):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:1934: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.CollectionViewRestriction doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class CollectionViewRestriction(BaseViewRestriction):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:1950: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.Collection doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class Collection(MP_Node):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailcore/models.py:2010: RemovedInDjango19Warning: Model class wagtail.wagtailcore.models.GroupCollectionPermission doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class GroupCollectionPermission(models.Model):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtailusers/models.py:10: RemovedInDjango19Warning: Model class wagtail.wagtailusers.models.UserProfile doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class UserProfile(models.Model):
+
+/usr/local/lib/python3.4/dist-packages/wagtail/wagtaildocs/models.py:82: RemovedInDjango19Warning: Model class wagtail.wagtaildocs.models.Document doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class Document(AbstractDocument):
+
+[pid: 2733|app: 0|req: 1/1] 115.202.66.208 () {42 vars in 700 bytes} [Thu Jan  4 11:01:58 2018] GET / => generated 939 bytes in 1043 msecs (HTTP/1.1 200) 1 headers in 59 bytes (1 switches on core 0)
+[pid: 2733|app: 0|req: 2/2] 117.50.7.159 () {30 vars in 321 bytes} [Thu Jan  4 11:05:32 2018] GET / => generated 939 bytes in 4 msecs (HTTP/1.0 200) 1 headers in 59 bytes (1 switches on core 1)
