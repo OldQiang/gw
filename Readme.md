@@ -1,6 +1,6 @@
 ## Build project
 
-````
+````windows cmd
 django-admin startproject gw
 ````
 
@@ -8,30 +8,33 @@ django-admin startproject gw
 
 
 
-```
+## Build app
+
+```windows cmd
 pyhton3 manage.py startapp gwapp
 ```
 
 *setting.py:* 
 
-```python
+```windows cmd
 INSTALLED_APPS = [
   #...
   'gwapp'
 ]
-
 ```
 
 
 
-```terminal
+## Build data base
+
+```windows cmd
 pyhton3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
 
 
-```
+```windows cmd
 python3 manage.py runsever
 ```
 

@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from . import view,search
+from app_.views import data_base_test
 
 
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
    # url(r'^cms/', include(wagtailadmin_urls)),
    # url(r'^documents/', include(wagtaildocs_urls)),
    # url(r'^pages/', include(wagtail_urls)),
+   url(r'^test/', data_base_test),
 ]
