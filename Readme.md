@@ -11,15 +11,15 @@ django-admin startproject gw
 ## Build app
 
 ```windows cmd
-pyhton3 manage.py startapp gwapp
+pyhton manage.py startapp app_
 ```
 
 *setting.py:* 
 
-```windows cmd
+```python
 INSTALLED_APPS = [
   #...
-  'gwapp'
+  'app_'
 ]
 ```
 
@@ -28,13 +28,49 @@ INSTALLED_APPS = [
 ## Build data base
 
 ```windows cmd
-pyhton3 manage.py makemigrations
-python3 manage.py migrate
+pyhton manage.py makemigrations
+python manage.py migrate
+```
+
+*models.py*
+
+```python
+class People(models.Model):
+    name = models.CharField(null=True, blank=True, max_length=100)
+    password = models.CharField(null=True, blank=True, max_length=100)
+```
+
+```windows cmd
+pyhton manage.py makemigrations
+python manage.py migrate
+```
+
+*view.py*
+
+```python
+from django.shortcuts import render,HttpResponse
+from app_.models import People
+
+# Create your views here.
+
+def data_base_test(request):
+    someone = People(name='bro',password='666666')
+    return HttpResponse('hello '+someone.name)
+```
+
+*urls.py*
+
+```python
+
+urlpatterns = [
+    #...
+   url(r'^test/', data_base_test),
+]
 ```
 
 
 
 ```windows cmd
-python3 manage.py runsever
+python manage.py runsever
 ```
 
