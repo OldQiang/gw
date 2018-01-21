@@ -13,19 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-from . import view,search
+#from . import view,search
 from app_.views import data_base_test
-
+from blog import *
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$',view.hello),
-    url(r'^search-form$', search.search_form),
-    url(r'^search$', search.search),
-   # url(r'^cms/', include(wagtailadmin_urls)),
-   # url(r'^documents/', include(wagtaildocs_urls)),
-   # url(r'^pages/', include(wagtail_urls)),
+   url(r'^admin/', admin.site.urls),
+   url(r'^blog/',include(blog.urls)),
    url(r'^test/', data_base_test),
 ]
