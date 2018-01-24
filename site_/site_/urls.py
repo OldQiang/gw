@@ -17,10 +17,11 @@ from django.conf.urls import url,include
 from django.contrib import admin
 #from . import view,search
 from app_.views import data_base_test
-
+from blog import views
 
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^blog/', include('blog.urls')),
    url(r'^test/', data_base_test),
+   url(r'^blog/$', views.blog_index),
 ]
