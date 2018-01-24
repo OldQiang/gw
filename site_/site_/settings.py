@@ -125,6 +125,13 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('images',os.path.join(STATIC_ROOT,'images').replace('\\','/')),
+    ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),
+)
+
 BOOTSTRAP3 = {
 
     'jquery_url': '//code.jquery.com/jquery.min.js',
@@ -164,7 +171,7 @@ BOOTSTRAP3 = {
     'field_renderers': {
         'default': 'bootstrap3.renderers.FieldRenderer',
         'inline': 'bootstrap3.renderers.InlineFieldRenderer',
-        },
+     },
 }
 
 
