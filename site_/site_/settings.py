@@ -126,10 +126,6 @@ BLOG_URL = os.path.join(BASE_DIR,  'blog')
 BLOG_STATIC_URL = os.path.join(BLOG_URL,  'static')
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-#STATIC_ROOT += os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')
-
-#MEDIA_ROOT = 'media/'
-#MEDIA_URL = 'media/'
 
 print(STATIC_ROOT)
 print(BLOG_STATIC_URL)

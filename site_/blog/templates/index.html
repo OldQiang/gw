@@ -36,8 +36,20 @@
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
+
             </ul>
-        </div><!--/.nav-collapse --> </div>
+
+            <div class="col-lg-5  pull-right" style="margin-top: 8px;">
+                <div class="input-group">
+                    <input type="text" style="width:100%" class="form-control"   placeholder="search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!--/.nav-collapse -->
+
+    </div>
 </nav>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -86,7 +98,7 @@
         <h2>{{ blog.title }}</h2>
         <img src="/{{ blog.image.url }} " height="100" width="100">123</img>
         <p>{{ blog.timestamp }}</p>
-        {{ blog.body }}
+        {{ blog.body | safe | truncatechars:500 }}
         {% endfor %}
     </div>
 </div><!-- /.container -->
