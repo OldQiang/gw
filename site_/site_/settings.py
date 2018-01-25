@@ -126,9 +126,10 @@ BLOG_URL = os.path.join(BASE_DIR,  'blog')
 BLOG_STATIC_URL = os.path.join(BLOG_URL,  'static')
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATIC_ROOT += os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')
+#STATIC_ROOT += os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')
 
-MEDIA_URL =  '/blog/staitc/images/'
+#MEDIA_ROOT = 'media/'
+#MEDIA_URL = 'media/'
 
 print(STATIC_ROOT)
 print(BLOG_STATIC_URL)
@@ -138,7 +139,7 @@ STATICFILES_DIRS = (
     ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
     ('images',os.path.join(STATIC_ROOT,'images').replace('\\','/')),
     ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),
-    ('images', os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')),
+    #('images', os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')),
 )
 print(STATICFILES_DIRS)
 

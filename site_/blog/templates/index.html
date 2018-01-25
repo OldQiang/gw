@@ -55,17 +55,12 @@
 
 <div class="carousel-inner" role="listbox">
 
-    <div class="item active">
-      <img src="/blog/static/images/5a058ad6Na7217e8b.jpg" class="img-responsive center-block" alt="四轴">
-      <div class="carousel-caption">
-      </div>
-    </div>
+        <div class="active item">
+            <img src="/static/images/plane4.jpg" class="img-responsive center-block" alt="四轴">
+        <div class="carousel-caption">
+        </div>
 <!--
-    <div class="item">
-      <img src="/static/images/plane.jpg" style="vertical-align:middle;" alt="四轴">
-      <div class="carousel-caption">
-      </div>
-    </div>
+
     <div class="item">
       <img src="/static/images/robot.jpg" style="vertical-align:middle;" alt="机器人">
       <div class="carousel-caption">
@@ -89,7 +84,7 @@
     <img class="starter-template">
         {% for blog in blog_list %}
         <h2>{{ blog.title }}</h2>
-        <img src="/static/images/5a058ad6Na7217e8b.jpg">123</img>
+        <img src="/{{ blog.image.url }} " height="100" width="100">123</img>
         <p>{{ blog.timestamp }}</p>
         {{ blog.body }}
         {% endfor %}

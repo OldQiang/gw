@@ -15,8 +15,4 @@ def blog_index(request):
     for blog in blog_list:
         blog.body = markdown(blog.body)
     slider_list =  Slider.objects.all();
-    for slider in slider_list:
-        print("slider.image url is ")
-        print(slider.image)
-        print(slider.image.url)
     return render(request,'index.html', {'blog_list':blog_list},{'slider_list':slider_list})
