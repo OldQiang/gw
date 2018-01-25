@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import  HttpResponse
-from .models import Article
+from .models import Article,Slider
+from markdown import markdown
 import os
 # Create your views here.
 def index(request):
@@ -11,4 +12,11 @@ def upload(request):
 
 def blog_index(request):
     blog_list = Article.objects.all() # 获取所有数据
-    return render(request,'index.html', {'blog_list':blog_list})
+    for blog in blog_list:
+        blog.body = markdown(blog.body)
+    slider_list =  Slider.objects.all();
+    for slider in slider_list:
+        print("slider.image url is ")
+        print(slider.image)
+        print(slider.image.url)
+    return render(request,'index.html', {'blog_list':blog_list},{'slider_list':slider_list})

@@ -23,5 +23,5 @@ urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^blog/', include('blog.urls')),
    url(r'^test/', data_base_test),
-   url(r'^blog/$', views.blog_index),
+
 ]

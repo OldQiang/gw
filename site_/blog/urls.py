@@ -5,4 +5,5 @@ urlpatterns = [
  #   url(r'^$',views.index,name='index'),
     url(r'^upload$',views.upload,name='upload'),
     url(r'^upload_file$', upload_file.upload_file ),
+    url(r'^$', views.blog_index),
 ]
