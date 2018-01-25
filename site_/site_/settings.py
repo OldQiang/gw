@@ -35,16 +35,18 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+	'django.contrib.staticfiles',
     'django.contrib.messages',
     'bootstrap3',
     'app_',
+	'blog',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -120,6 +122,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('images',os.path.join(STATIC_ROOT,'images').replace('\\','/')),
+    ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),
+)
+
 BOOTSTRAP3 = {
 
     'jquery_url': '//code.jquery.com/jquery.min.js',
@@ -159,7 +171,7 @@ BOOTSTRAP3 = {
     'field_renderers': {
         'default': 'bootstrap3.renderers.FieldRenderer',
         'inline': 'bootstrap3.renderers.InlineFieldRenderer',
-        },
+     },
 }
 
 
