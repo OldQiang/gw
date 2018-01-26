@@ -122,18 +122,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+BLOG_URL = os.path.join(BASE_DIR,  'blog')
+BLOG_STATIC_URL = os.path.join(BLOG_URL,  'static')
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+print(STATIC_ROOT)
+print(BLOG_STATIC_URL)
 
 STATICFILES_DIRS = (
     ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
     ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
     ('images',os.path.join(STATIC_ROOT,'images').replace('\\','/')),
     ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),
+    #('images', os.path.join(BLOG_STATIC_URL, 'images').replace('\\', '/')),
 )
+print(STATICFILES_DIRS)
 
 BOOTSTRAP3 = {
-
     'jquery_url': '//code.jquery.com/jquery.min.js',
     'base_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/',
     'css_url': None,
