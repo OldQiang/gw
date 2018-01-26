@@ -29,6 +29,12 @@ def blog_index(request):
 def blog_details(request,blog_id):
     try:
         blog = Article.objects.get(id=blog_id)
+        blog.body = markdown( blog.body,
+                                  extensions=[
+                                     'markdown.extensions.extra',
+                                     'markdown.extensions.codehilite',
+                                     'markdown.extensions.toc',
+                                  ])
     except Article.DoesNotExist:
         raise Http404
     if request.method == 'GET':
@@ -44,4 +50,4 @@ def blog_details(request,blog_id):
         'comments':blog.comment_set.all().order_by('-created'),
         'form':form
     }
-    return render(request,'blog_details.html',ctx)
+    return render(request,'details.html',ctx)

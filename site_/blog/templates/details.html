@@ -60,7 +60,7 @@
     <span><a href="{% url 'blog_get_detail' blog.id %}">{{ blog.title }}</a></span>
 </div>
 
-<div class="content">
+<div class="container" style="margin-top: 50px;">
     <div class="blog">
         <div class="title">
             <a href="#"><h2>{{ blog.title }}</h2></a>
@@ -71,7 +71,7 @@
             <span class="created" style="color: #6aa84f">{{ blog.created|date:"Y-m-d H:i" }}</span>
         </div>
         <div class="summary">
-            {{ blog.content }}
+            {{ blog.body| safe }}
         </div>
     </div>
     <div class="comment">
