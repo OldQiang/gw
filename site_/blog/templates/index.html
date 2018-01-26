@@ -96,7 +96,7 @@
     <img class="starter-template">
         {% for blog in blog_list %}
         <a href="{% url 'blog_get_detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
-        <img src="/{{ blog.image.url }} " height="100" width="100">123</img>
+        <img src="/{{ blog.image.url }} " height="100" width="100">
         <p>{{ blog.timestamp }}</p>
         {{ blog.body | safe | truncatechars:500 }}
         {% endfor %}
