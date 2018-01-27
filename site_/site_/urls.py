@@ -18,10 +18,11 @@ from django.contrib import admin
 #from . import view,search
 from app_.views import data_base_test
 from blog import views
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
    url(r'^admin/', admin.site.urls),
    url(r'^blog/', include('blog.urls')),
    url(r'^test/', data_base_test),
-
+   url(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
