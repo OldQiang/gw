@@ -43,7 +43,7 @@ def blog_details(request,blog_id):
         form = CommentForm(request.POST)
         if form.is_valid():
             cleaned_data = form.cleaned_data
-            cleaned_data['blog'] = blog
+            cleaned_data['Article'] = blog
             Comment.objects.create(**cleaned_data)
     ctx = {
         'blog':blog,
