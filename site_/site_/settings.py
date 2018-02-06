@@ -38,7 +38,6 @@ INSTALLED_APPS = [
 	'django.contrib.staticfiles',
     'django.contrib.messages',
     'bootstrap3',
-    'app_',
 	'blog',
 ]
 
@@ -57,7 +56,8 @@ ROOT_URLCONF = 'site_.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR+"/templates",],
+        'DIRS': [   BASE_DIR+"/templates",
+                    BASE_DIR+"/blog/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

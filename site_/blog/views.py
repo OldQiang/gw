@@ -13,8 +13,8 @@ def index(request):
 def upload(request):
     return render(request,'upload.html')
 
-def test(request):
-    return render(request,'test.html')
+def cover(request):
+    return render(request,'cover.html')
 
 def blog_index(request):
     blog_list = Article.objects.all() # 获取所有数据
